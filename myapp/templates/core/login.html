@@ -1,0 +1,26 @@
+{% extends 'core/base.html'%}
+
+{% block title %} Sign in {% endblock %}
+
+{% block content%}
+<main class="signin py-5 mt-5 rounded" style="background-color: #121f2d;">
+    <h1 class="text-center py-4 text-light" >Signin</h1>
+    <div style="display: flex; justify-content: center;" class="signin">
+        <form action="." method="post" style="display: grid; grid-template-columns: auto ; ">
+            {% csrf_token %}
+            <input class="form-control py-2 px-5" type="text" name="username" id="username" placeholder="Create Username"
+                required>
+            <br>
+          
+          
+         
+            <input class="form-control py-2 px-5" type="password" name="password1" id="password1" placeholder="Create password"
+                required>
+            <br>
+          
+            <button class="btn btn-success  py-3 px-4"><a class="text-decoration-none text-light"
+                    href="">Submit</a></button>
+        </form>
+    </div>
+    </main>
+{% endblock %}
